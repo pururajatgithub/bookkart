@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  backend:
+    image: bookkart-backend:v1
+    container_name: bookart_backend
+    command: ./manage.py runserver 0.0.0.0:8000
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
